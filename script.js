@@ -58,11 +58,13 @@ const app = new Vue({
             
         ],
         currentSong : null,
+        currentSongBar : 0,
     },
 
     methods: {
         playme(index){
             console.log(index)
+            this.currentSongBar = index
             if(this.currentSong != null){
                 this.currentSong.pause()
                 this.songs.forEach(song => {

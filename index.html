@@ -36,6 +36,27 @@
                     <span>{{song.title}}</span>
                 </div>
             </div>
+            <div v-if="currentSong != null" class="currentSong d-flex align-items-center" >
+                <div class="currentSongSlide d-infline-block">
+                    <img :src="`img/${songs[currentSongBar].imgLink}`" alt=""><br>
+                    <span>{{songs[currentSongBar].band}}</span><br>
+                    <span>{{songs[currentSongBar].title}}</span>
+                </div>
+                <div  class="d-inline-block play-tools" >
+                    <i class="fa-solid fa-backward"></i>
+                    <div class="d-inline-block" @click="songs[currentSongBar].play ? stopaudio(currentSongBar) : playme(currentSongBar)">
+                        <i v-if="songs[currentSongBar].play === false"  class="fa-solid fa-play"></i>
+                        <i v-else class="fa-solid fa-stop"></i>
+                    </div>
+
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+                <div class="options d-inline-block">
+                    
+                    <i class="fa-solid fa-volume-high"></i>
+                        
+                </div>
+            </div>
         </div>
         
        

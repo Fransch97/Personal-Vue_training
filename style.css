@@ -19,6 +19,7 @@ h1{
     height: 100vh;
     color: white;
     padding: 50px;
+    position: relative;
 }
 .card-brand{
     border: 2px solid rgb(117, 110, 122);
@@ -66,4 +67,36 @@ i{
 span{
     font-weight: bold;
     text-transform: capitalize;
+}
+
+.currentSong{
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    bottom: 10px;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    color: black;
+}
+.currentSong img{
+    width: 100px;
+}
+.currentSong i{
+    color: black;
+    font-size: 30px;
+}
+.play-tools{
+    width: 50%;
+    text-align: center;
+}
+.currentSongSlide{
+    width: 25%;
+}
+.options{
+    width: 25%;
+}
+.fa-play.currentsong,.fa-stop.currentsong{
+    margin: 0 20px ;
 }
