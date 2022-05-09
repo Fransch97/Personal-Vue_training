@@ -81,6 +81,7 @@ span{
     color: black;
 }
 .currentSong img{
+    height: 100px;
     width: 100px;
 }
 .currentSong i{

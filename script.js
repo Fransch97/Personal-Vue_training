@@ -87,6 +87,9 @@ const app = new Vue({
         stopaudio(index){
             this.currentSong.pause()
             this.songs[index].play = false
-        }
+        },
+       
     },
+
+   
 })
