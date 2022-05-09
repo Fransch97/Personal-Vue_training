@@ -27,7 +27,7 @@
                 <div v-for="(song, index) in songs" class="card-brand mt-4">
                     <div class="img-card">
                         <img :src="`img/${song.imgLink}`" alt="">
-                        <div class="play-sc" @click="play ? stopaudio() : playme(index)">
+                        <div class="play-sc" @click="song.play ? stopaudio(index) : playme(index)">
                             <i v-if="song.play === false"  class="fa-solid fa-play"></i>
                             <i v-else class="fa-solid fa-stop"></i>
                         </div>

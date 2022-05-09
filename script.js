@@ -57,7 +57,7 @@ const app = new Vue({
             },
             
         ],
-        currentSong : null
+        currentSong : null,
     },
 
     methods: {
@@ -78,8 +78,13 @@ const app = new Vue({
                 this.currentSong = new Audio( "songs/" + this.songs[index].audio)
                 this.currentSong.play()
                 this.songs[index].play = true
+                this.play = true
 
             }
+        },
+        stopaudio(index){
+            this.currentSong.pause()
+            this.songs[index].play = false
         }
     },
 })
